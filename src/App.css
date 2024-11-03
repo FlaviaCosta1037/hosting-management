@@ -44,3 +44,17 @@
 
 }
 
+/* styles.css ou outro arquivo CSS */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Para rolagem horizontal se necessário */
+}
+
+table {
+  width: 100%; /* Tabela ocupa 100% da largura disponível */
+}
+
+th, td {
+  text-align: center; /* Centraliza o texto nas células */
+  white-space: nowrap; /* Evita quebra de texto nas células */
+}
