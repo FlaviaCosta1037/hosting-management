@@ -94,8 +94,6 @@ export default function EditHosting() {
       </MDBContainer>
 
       <MDBContainer>
-        <MDBCard className="mb-4">
-          <MDBCardBody>
             <MDBInput
               label="Data de Check-in"
               value={hosting.dateCheckin}
@@ -149,8 +147,6 @@ export default function EditHosting() {
                 <MDBBtn color='danger' onClick={() => navigate('/hosting')}>Voltar</MDBBtn>
               </MDBCol>
             </MDBRow>
-          </MDBCardBody>
-        </MDBCard>
       </MDBContainer>
       </div>
       <Footer>

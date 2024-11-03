@@ -61,8 +61,7 @@ export default function ListCustomer() {
 
             {error && <p>{error}</p>}
             <MDBContainer>
-                <MDBCard className="mb-4">
-                    <MDBCardBody>
+
                         <MDBRow className="mt-3 justify-content-start"> 
                             <MDBCol md="3"> 
                                 <MDBInput
@@ -104,8 +103,6 @@ export default function ListCustomer() {
                                 ))}
                             </MDBTableBody>
                         </MDBTable>
-                    </MDBCardBody>
-                </MDBCard>
             </MDBContainer>
             </div>
             <Footer></Footer>

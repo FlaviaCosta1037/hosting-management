@@ -119,8 +119,7 @@ export default function AddCustomer() {
       </MDBContainer>
 
       <MDBContainer>
-        <MDBCard className="mb-4">
-          <MDBCardBody>
+
             <MDBInput label="Nome completo" value={customer.nome} onChange={(e) => setCustomer({ ...customer, nome: e.target.value })} id="typeText" type="text" className="mb-3" />
             <MDBInput label="CPF" value={customer.cpf} onChange={(e) => setCustomer({ ...customer, cpf: e.target.value })} id="typeText" type="text" className="mb-3" />
             <MDBInput label="Data de Nascimento" value={customer.dateOfBirth} onChange={(e) => setCustomer({ ...customer, dateOfBirth: e.target.value })} id="typeDate" type="date" className="mb-3" />
@@ -139,8 +138,6 @@ export default function AddCustomer() {
                 <MDBBtn className='me-1' color='danger' onClick={() => navigate('/listCustomer')}  >Voltar</MDBBtn>
               </MDBCol>
             </MDBRow>
-          </MDBCardBody>
-        </MDBCard>
       </MDBContainer>
       </div>
       <Footer></Footer>

@@ -117,8 +117,7 @@ export default function ListExpenses() {
                 </MDBContainer>
 
                 <MDBContainer>
-                    <MDBCard className="mb-4">
-                        <MDBCardBody>
+
                             <MDBTable>
                                 <MDBTableHead light>
                                     <tr>
@@ -142,8 +141,6 @@ export default function ListExpenses() {
                                     ))}
                                 </MDBTableBody>
                             </MDBTable>
-                        </MDBCardBody>
-                    </MDBCard>
                     <MDBContainer className="d-flex justify-content-center mt-4">
                         <MDBCard className="text-center" style={{ width: '300px' }}>
                             <MDBCardBody className='custom-card'>

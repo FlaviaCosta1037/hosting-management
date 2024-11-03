@@ -54,8 +54,6 @@ export default function AddExpense() {
       </MDBContainer>
 
       <MDBContainer>
-        <MDBCard className="mb-4">
-          <MDBCardBody>
             <MDBInput
               label="Data da Despesa"
               value={expense.expenseDate}
@@ -89,8 +87,6 @@ export default function AddExpense() {
                 <MDBBtn color='danger' onClick={() => navigate('/expenses')}>Voltar</MDBBtn>
               </MDBCol>
             </MDBRow>
-          </MDBCardBody>
-        </MDBCard>
       </MDBContainer>
       </div>
       <Footer></Footer>

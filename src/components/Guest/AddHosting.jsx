@@ -150,8 +150,6 @@ export default function AddHosting() {
       </MDBContainer>
 
       <MDBContainer>
-        <MDBCard className="mb-4">
-          <MDBCardBody>
             <MDBInput
               label="CPF do Cliente"
               value={customerCPF}
@@ -231,8 +229,6 @@ export default function AddHosting() {
                 </MDBRow>
               </>
             )}
-          </MDBCardBody>
-        </MDBCard>
       </MDBContainer>
       </div>
       <Footer></Footer>

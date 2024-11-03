@@ -89,8 +89,6 @@ function EditExpense() {
             </MDBContainer>
             {error && <p className="text-danger">{error}</p>}
             <MDBContainer>
-                <MDBCard className="mb-4">
-                    <MDBCardBody>
                         {expense ? (
                             <form onSubmit={handleSubmit}>
                                 <h2>Editar Despesa</h2>
@@ -132,8 +130,6 @@ function EditExpense() {
                         ) : (
                             <p>Despesa não encontrada.</p>
                         )}
-                    </MDBCardBody>
-                </MDBCard>
             </MDBContainer>
             </div>
             <Footer></Footer>

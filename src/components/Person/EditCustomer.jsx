@@ -69,8 +69,6 @@ export default function EditCustomer() {
             </MDBContainer>
 
             <MDBContainer>
-                <MDBCard className="mb-4">
-                    <MDBCardBody>
                         <MDBInput
                             className="mb-3" // Adiciona margem inferior
                             label="Nome completo"
@@ -159,8 +157,6 @@ export default function EditCustomer() {
                                 <MDBBtn className='me-1' color='danger' onClick={() => navigate('/listCustomer')}>Voltar</MDBBtn>
                             </MDBCol>
                         </MDBRow>
-                    </MDBCardBody>
-                </MDBCard>
             </MDBContainer>
             </div>
             <Footer></Footer>
