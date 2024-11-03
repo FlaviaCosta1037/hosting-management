@@ -86,7 +86,7 @@ export default function ListHosting() {
                                     <td>{item.dailyRate}</td>
                                     <td>{item.total}</td>
                                     <td>
-                                        <div className="d-flex flex-wrap justify-content-center">
+                                        <div className="flex-row flex-wrap justify-content-center">
                                             <MDBBtn color="primary" onClick={() => navigate(`/editHosting/${item.id}`, { state: { customerCPF: item.customerCPF, customerName: item.customerName } })}>
                                                 Editar
                                             </MDBBtn>
