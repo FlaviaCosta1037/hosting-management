@@ -34,8 +34,7 @@ const Login = () => {
 
     return (
         <>
-            <div className='animated-background'>
-                <MDBContainer className=" my-5">
+                <MDBContainer className='animated-background my-5'><br />
                     <MDBCard>
                         <MDBRow className='g-0'>
                             {/* <MDBCol md='6'>
@@ -96,7 +95,6 @@ const Login = () => {
                         </MDBRow>
                     </MDBCard>
                 </MDBContainer>
-            </div>
             <Footer></Footer>
         </>
     );
