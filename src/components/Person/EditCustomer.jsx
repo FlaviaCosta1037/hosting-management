@@ -158,7 +158,7 @@ export default function EditCustomer() {
                             </MDBCol>
                         </MDBRow>
             </MDBContainer>
-            </div>
+            </div><br />
             <Footer></Footer>
         </>
     );

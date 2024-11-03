@@ -131,7 +131,7 @@ function EditExpense() {
                             <p>Despesa não encontrada.</p>
                         )}
             </MDBContainer>
-            </div>
+            </div><br />
             <Footer></Footer>
         </>
 

@@ -49,62 +49,62 @@ export default function ListCustomer() {
     return (
         <>
             <Navbar />
-            <div className="table-responsive">
+
             <MDBContainer className="text-center py-5">
                 <MDBTypography tag="h1" className="display-4 text-primary">
                     Gerenciamento de Hospedagem
                 </MDBTypography>
                 <MDBTypography tag="p" className="lead">
-                    
+
                 </MDBTypography>
             </MDBContainer>
 
             {error && <p>{error}</p>}
             <MDBContainer>
 
-                        <MDBRow className="mt-3 justify-content-start"> 
-                            <MDBCol md="3"> 
-                                <MDBInput
-                                    label="Buscar por CPF"
-                                    value={searchCPF}
-                                    onChange={(e) => setSearchCPF(e.target.value)}
-                                    id="searchCPF"
-                                    type="text"
-                                />
-                            </MDBCol>
-                        </MDBRow>
-                        <br />
-                        <MDBBtn onClick={handleSearch}>Pesquisar</MDBBtn>
-
-                        <MDBTable className="mt-3">
-                            <MDBTableHead light>
-                                <tr>
-                                    <th scope='row'>CPF</th>
-                                    <th scope='row'>NOME</th>
-                                    <th scope='row'>ESTADO</th>
-                                    <th scope='row'>AÇÕES</th>
+                <MDBRow className="mt-3 justify-content-start">
+                    <MDBCol md="3">
+                        <MDBInput
+                            label="Buscar por CPF"
+                            value={searchCPF}
+                            onChange={(e) => setSearchCPF(e.target.value)}
+                            id="searchCPF"
+                            type="text"
+                        />
+                    </MDBCol>
+                </MDBRow>
+                <br />
+                <MDBBtn onClick={handleSearch}>Pesquisar</MDBBtn>
+                <div className="table-responsive">
+                    <MDBTable className="mt-3">
+                        <MDBTableHead light>
+                            <tr>
+                                <th scope='row'>CPF</th>
+                                <th scope='row'>NOME</th>
+                                <th scope='row'>ESTADO</th>
+                                <th scope='row'>AÇÕES</th>
+                            </tr>
+                        </MDBTableHead>
+                        <MDBTableBody>
+                            {filteredCustomers.map((item) => (
+                                <tr key={item.id}>
+                                    <td>{item.cpf}</td>
+                                    <td>{item.nome}</td>
+                                    <td>{item.uf}</td>
+                                    <td>
+                                        <MDBRow className="mt-3">
+                                            <MDBCol className="d-flex">
+                                                <MDBBtn className="me-3" onClick={() => navigate(`/customers/${item.id}`)}>Editar</MDBBtn>
+                                                <MDBBtn onClick={() => handleDeleteCustomer(item.id)} color="danger">Deletar</MDBBtn>
+                                            </MDBCol>
+                                        </MDBRow>
+                                    </td>
                                 </tr>
-                            </MDBTableHead>
-                            <MDBTableBody>
-                                {filteredCustomers.map((item) => (
-                                    <tr key={item.id}>
-                                        <td>{item.cpf}</td>
-                                        <td>{item.nome}</td>
-                                        <td>{item.uf}</td>
-                                        <td>
-                                            <MDBRow className="mt-3">
-                                                <MDBCol className="d-flex">
-                                                    <MDBBtn className="me-3" onClick={() => navigate(`/customers/${item.id}`)}>Editar</MDBBtn>
-                                                    <MDBBtn onClick={() => handleDeleteCustomer(item.id)} color="danger">Deletar</MDBBtn>
-                                                </MDBCol>
-                                            </MDBRow>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </MDBTableBody>
-                        </MDBTable>
+                            ))}
+                        </MDBTableBody>
+                    </MDBTable>
+                </div>
             </MDBContainer>
-            </div>
             <Footer></Footer>
         </>
     );

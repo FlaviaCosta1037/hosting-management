@@ -80,67 +80,67 @@ export default function ListExpenses() {
     return (
         <>
             <Navbar />
-            <div className="table-responsive">
-                <MDBContainer className="text-center py-5">
-                    <MDBTypography tag="h1" className="display-4 text-primary">
-                        Gerenciamento de Hospedagem
-                    </MDBTypography>
-                    <MDBTypography tag="p" className="lead">
-                        Relatório de despesas
-                    </MDBTypography>
-                </MDBContainer>
+            <MDBContainer className="text-center py-5">
+                <MDBTypography tag="h1" className="display-4 text-primary">
+                    Gerenciamento de Hospedagem
+                </MDBTypography>
+                <MDBTypography tag="p" className="lead">
+                    Relatório de despesas
+                </MDBTypography>
+            </MDBContainer>
 
-                {error && <p className="text-danger">{error}</p>}
+            {error && <p className="text-danger">{error}</p>}
 
-                <MDBContainer className="mb-4">
-                    <MDBCard>
-                        <MDBCardBody>
-                            <MDBInput
-                                label="Mês (1-12)"
-                                type="number"
-                                min="1"
-                                max="12"
-                                value={filterMonth}
-                                onChange={(e) => setFilterMonth(e.target.value)}
-                                className="mb-3"
-                            />
-                            <MDBInput
-                                label="Ano (ex: 2024)"
-                                type="number"
-                                value={filterYear}
-                                onChange={(e) => setFilterYear(e.target.value)}
-                                className="mb-3"
-                            />
-                            <MDBBtn onClick={handleFilterChange}>Filtrar</MDBBtn>
-                        </MDBCardBody>
-                    </MDBCard>
-                </MDBContainer>
 
-                <MDBContainer>
+            <MDBContainer className="mb-4">
+                <MDBCard>
+                    <MDBCardBody>
+                        <MDBInput
+                            label="Mês (1-12)"
+                            type="number"
+                            min="1"
+                            max="12"
+                            value={filterMonth}
+                            onChange={(e) => setFilterMonth(e.target.value)}
+                            className="mb-3"
+                        />
+                        <MDBInput
+                            label="Ano (ex: 2024)"
+                            type="number"
+                            value={filterYear}
+                            onChange={(e) => setFilterYear(e.target.value)}
+                            className="mb-3"
+                        />
+                        <MDBBtn onClick={handleFilterChange}>Filtrar</MDBBtn>
+                    </MDBCardBody>
+                </MDBCard>
+            </MDBContainer>
 
-                            <MDBTable>
-                                <MDBTableHead light>
-                                    <tr>
-                                        <th scope="col">Data da Despesa</th>
-                                        <th scope="col">Nome da Despesa</th>
-                                        <th scope="col">Valor</th>
-                                        <th scope="col">Ações</th>
-                                    </tr>
-                                </MDBTableHead>
-                                <MDBTableBody>
-                                    {filteredExpenses.map((expense) => (
-                                        <tr key={expense.id}>
-                                            <td>{formatDate(expense.expenseDate)}</td>
-                                            <td>{expense.expenseName}</td>
-                                            <td>{expense.value.toFixed(2)}</td>
-                                            <td>
-                                                <MDBBtn onClick={() => navigate(`/editExpense/${expense.id}`)}>Editar</MDBBtn>
-                                                <MDBBtn color='danger' className='ms-2' onClick={() => handleDelete(expense.id)}>Deletar</MDBBtn>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </MDBTableBody>
-                            </MDBTable>
+            <MDBContainer>
+                <div className="table-responsive">
+                    <MDBTable>
+                        <MDBTableHead light>
+                            <tr>
+                                <th scope="col">Data da Despesa</th>
+                                <th scope="col">Nome da Despesa</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                        </MDBTableHead>
+                        <MDBTableBody>
+                            {filteredExpenses.map((expense) => (
+                                <tr key={expense.id}>
+                                    <td>{formatDate(expense.expenseDate)}</td>
+                                    <td>{expense.expenseName}</td>
+                                    <td>{expense.value.toFixed(2)}</td>
+                                    <td>
+                                        <MDBBtn onClick={() => navigate(`/editExpense/${expense.id}`)}>Editar</MDBBtn>
+                                        <MDBBtn color='danger' className='ms-2' onClick={() => handleDelete(expense.id)}>Deletar</MDBBtn>
+                                    </td>
+                                </tr>
+                            ))}
+                        </MDBTableBody>
+                    </MDBTable>
                     <MDBContainer className="d-flex justify-content-center mt-4">
                         <MDBCard className="text-center" style={{ width: '300px' }}>
                             <MDBCardBody className='custom-card'>
@@ -151,8 +151,8 @@ export default function ListExpenses() {
                             </MDBCardBody>
                         </MDBCard>
                     </MDBContainer>
-                </MDBContainer>
-            </div >
+                </div >
+            </MDBContainer>
             <Footer />
         </>
     );

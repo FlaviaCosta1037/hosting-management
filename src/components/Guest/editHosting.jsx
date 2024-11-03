@@ -148,7 +148,7 @@ export default function EditHosting() {
               </MDBCol>
             </MDBRow>
       </MDBContainer>
-      </div>
+      </div><br />
       <Footer>
       </Footer>
     </>
