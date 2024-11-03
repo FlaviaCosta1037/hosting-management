@@ -34,15 +34,15 @@ const Login = () => {
 
     return (
         <>
-                <MDBContainer className='animated-background my-5'><br />
-                    <MDBCard>
+                <MDBContainer className='animated-background' style={{ minHeight: '100vh', padding: 0 }}><br />
+                    <MDBCard className='mx-auto my-5' style={{ maxWidth: '400px' }}>
                         <MDBRow className='g-0'>
                             {/* <MDBCol md='6'>
                         <MDBCardImage src='https://www.carneirostemporada.com/media/5c598b748631470011f5598d/Vista%20a%C3%A9rea.jpg' alt="login form" className='rounded-start w-100' />
                     </MDBCol> */}
 
-                            <MDBCol md='6'>
-                                <MDBCardBody className='d-flex flex-column'>
+                            <MDBCol md='12'>
+                                <MDBCardBody className='d-flex flex-column align-items-center'>
                                     <div className='d-flex flex-row mt-2'>
                                         <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }} />
                                         <img src="DevF.png" alt="" style={{ width: '100px', borderRadius: '40px' }} />
