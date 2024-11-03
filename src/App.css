@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.custom-card {
+  background-color: #cce5ff; /* Azul claro */
+  border: 2px solid #007bff; /* Cor da borda */
+  border-radius: 10px; /* Bordas arredondadas */
+  text-decoration: dotted;
+
+}
+
