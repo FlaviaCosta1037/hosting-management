@@ -22,14 +22,14 @@ export default function Navbar() {
       <MDBContainer fluid>
         <MDBNavbarToggler
           type='button'
-          aria-expanded={openNavRight} // Altere para controlar a acessibilidade
+          aria-expanded={openNavRight}
           aria-label='Toggle navigation'
           onClick={() => setOpenNavRight(!openNavRight)}
         >
           <MDBIcon icon='bars' fas />
         </MDBNavbarToggler>
 
-        <MDBCollapse navbar show={openNavRight ? 'true' : undefined}> {/* Alterado aqui */}
+        <MDBCollapse navbar show={openNavRight}>
           <MDBNavbarNav right className='mb-2 mb-lg-0'>
             <MDBNavbarItem>
               <MDBDropdown>
@@ -52,8 +52,6 @@ export default function Navbar() {
                   <MDBDropdownItem link href='/addCustomer'>Adicionar cliente</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBDropdown>

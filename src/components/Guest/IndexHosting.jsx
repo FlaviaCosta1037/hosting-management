@@ -65,13 +65,13 @@ export default function ListHosting() {
                 </MDBContainer>
 
                 {error && <p className="text-danger">{error}</p>}
-                <MDBContainer>
-                    <MDBCard className="mb-4">
+                <MDBContainer className="my-5">
+                    
                         <MDBCardBody>
                             <MDBRow className="mt-3 justify-content-start">
                                 {/* Campo de busca removido temporariamente */}
                             </MDBRow>
-                            <MDBTable>
+                            <MDBTable responsive>
                                 <MDBTableHead light>
                                     <tr>
                                         <th scope="col">Check-in</th>
@@ -103,7 +103,7 @@ export default function ListHosting() {
                                 </MDBTableBody>
                             </MDBTable>
                         </MDBCardBody>
-                    </MDBCard>
+               
                 </MDBContainer>
             </div>
             <Footer />
