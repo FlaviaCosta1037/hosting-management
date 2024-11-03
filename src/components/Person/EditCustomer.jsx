@@ -6,6 +6,7 @@ import { getDoc, doc, updateDoc } from 'firebase/firestore';
 import { useNavigate, useParams } from 'react-router-dom'; // Certifique-se de importar esses hooks
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import Footer from '../Footer/Footer';
+import '../../App.css'
 
 export default function EditCustomer() {
     const [customer, setCustomer] = useState({
@@ -57,7 +58,7 @@ export default function EditCustomer() {
     return (
         <>
             <Navbar />
-            <div className="page-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <div className="table-responsive">
             <MDBContainer className="text-center py-5">
                 <MDBTypography tag="h1" className="display-4 text-primary">
                     Gerenciamento de Hospedagem

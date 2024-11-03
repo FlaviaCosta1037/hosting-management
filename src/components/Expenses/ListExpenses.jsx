@@ -80,7 +80,7 @@ export default function ListExpenses() {
     return (
         <>
             <Navbar />
-            <div className="page-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <div className="table-responsive">
                 <MDBContainer className="text-center py-5">
                     <MDBTypography tag="h1" className="display-4 text-primary">
                         Gerenciamento de Hospedagem

@@ -5,6 +5,7 @@ import Navbar from '../Header/Navbar';
 import { db } from '../Services/firebase';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import Footer from '../Footer/Footer';
+import '../../App.css'
 
 export default function ListCustomer() {
     const navigate = useNavigate();
@@ -48,7 +49,7 @@ export default function ListCustomer() {
     return (
         <>
             <Navbar />
-            <div className="page-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <div className="table-responsive">
             <MDBContainer className="text-center py-5">
                 <MDBTypography tag="h1" className="display-4 text-primary">
                     Gerenciamento de Hospedagem

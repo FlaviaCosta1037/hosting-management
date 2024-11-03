@@ -6,6 +6,7 @@ import { collection, addDoc, query, where,getDocs} from 'firebase/firestore';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Footer/Footer';
+import '../../App.css'
 
 
 
@@ -107,7 +108,7 @@ export default function AddCustomer() {
   return (
     <>
       <Navbar />
-      <div className="page-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <div className="table-responsive">
       <MDBContainer className="text-center py-5">
         <MDBTypography tag="h1" className="display-4 text-primary">
           Gerenciamento de clientes

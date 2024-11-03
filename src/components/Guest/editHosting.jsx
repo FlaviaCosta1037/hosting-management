@@ -5,6 +5,7 @@ import { db } from '../Services/firebase';
 import { doc, getDoc, updateDoc,Timestamp } from 'firebase/firestore';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Footer from '../Footer/Footer';
+import '../../App.css'
 
 export default function EditHosting() {
   const navigate = useNavigate();
@@ -85,7 +86,7 @@ export default function EditHosting() {
   return (
     <>
       <Navbar /><br />
-      <div className="page-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <div className="table-responsive">
       <MDBContainer className="text-center py-5">
         <MDBTypography tag="h1" className="display-4 text-primary">
           Editar Hospedagem

@@ -5,6 +5,7 @@ import { db } from '../Services/firebase';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import Navbar from '../Header/Navbar';
 import Footer from '../Footer/Footer';
+import '../../App.css'
 
 function EditExpense() {
     const { id } = useParams();
@@ -76,7 +77,7 @@ function EditExpense() {
     return (
         <>
             <Navbar />
-            <div className="page-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <div className="table-responsive">
 
             <MDBContainer className="text-center py-5">
                 <MDBTypography tag="h1" className="display-4 text-primary">
