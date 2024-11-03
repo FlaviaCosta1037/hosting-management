@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MDBTable, MDBTableHead, MDBInput, MDBBtn, MDBContainer, MDBTypography, MDBCardBody, MDBTableBody, MDBCard, MDBCol, MDBRow } from 'mdb-react-ui-kit';
+import { MDBTable, MDBTableHead, MDBInput, MDBBtn, MDBContainer, MDBTypography, MDBTableBody, MDBCol, MDBRow } from 'mdb-react-ui-kit';
 import Navbar from '../Header/Navbar';
 import { db } from '../Services/firebase';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';

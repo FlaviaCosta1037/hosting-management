@@ -32,6 +32,7 @@ function App() {
         <Route path="/AddExpense" element={<AddExpense />} />
         <Route path="/expenses" element={<ListExpenses />} />
         <Route path="/editExpense/:id" element={<EditExpenses />} />
+        <Route path="/login" element={<Login />} />
         
       </Routes>
     </Router >

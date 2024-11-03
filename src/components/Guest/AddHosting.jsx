@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MDBInput, MDBBtn, MDBContainer, MDBTypography, MDBCard, MDBCardBody, MDBCol, MDBRow } from 'mdb-react-ui-kit';
+import { MDBInput, MDBBtn, MDBContainer, MDBTypography, MDBCol, MDBRow } from 'mdb-react-ui-kit';
 import Navbar from '../Header/Navbar';
 import { db } from '../Services/firebase';
 import { collection, query, where, getDocs, addDoc } from 'firebase/firestore';
@@ -230,7 +230,7 @@ export default function AddHosting() {
               </>
             )}
       </MDBContainer>
-      </div>
+      </div><br />
       <Footer></Footer>
     </>
   );

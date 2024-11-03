@@ -63,7 +63,7 @@ export default function Navbar() {
             </MDBDropdown>
           </MDBNavbarItem>
           <MDBNavbarItem>
-            <MDBNavbarLink active aria-current='page' href='#'>
+            <MDBNavbarLink active aria-current='page' link href='/login'>
               Sair
             </MDBNavbarLink>
           </MDBNavbarItem>

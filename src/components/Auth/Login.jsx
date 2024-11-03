@@ -44,12 +44,12 @@ const Login = () => {
                                 <span className="h1 fw-bold mb-0">Logo</span>
                             </div>
 
-                            <h5 className="fw-normal my-4 pb-3" style={{ letterSpacing: '1px' }}>Sign into your account</h5>
+                            <h5 className="fw-normal my-4 pb-3" style={{ letterSpacing: '1px' }}>Acesse o sistema</h5>
 
                             {/* Campos de entrada de email e senha */}
                             <MDBInput 
                                 wrapperClass='mb-4' 
-                                label='Email address' 
+                                label='Email' 
                                 id='formControlLg' 
                                 type='email' 
                                 size="lg"
@@ -58,7 +58,7 @@ const Login = () => {
                             />
                             <MDBInput 
                                 wrapperClass='mb-4' 
-                                label='Password' 
+                                label='Senha' 
                                 id='formControlLg' 
                                 type='password' 
                                 size="lg"
@@ -73,12 +73,12 @@ const Login = () => {
                                 size='lg'
                                 onClick={handleLogin}
                             >
-                                Login
+                                Acesse
                             </MDBBtn>
                             
-                            <a className="small text-muted" href="#!">Forgot password?</a>
+                            <a className="small text-muted" href="#!">Esqueceu sua senha?</a>
                             <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>
-                                Don't have an account? <a href="#!" style={{ color: '#393f81' }}>Register here</a>
+                                Don't have an account? <a href="#!" style={{ color: '#393f81' }}>Registre aqui</a>
                             </p>
 
                             <div className='d-flex flex-row justify-content-start'>

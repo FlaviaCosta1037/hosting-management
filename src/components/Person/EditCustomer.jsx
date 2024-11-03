@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { MDBInput, MDBBtn, MDBContainer, MDBTypography, MDBCard, MDBCardBody, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import { MDBInput, MDBBtn, MDBContainer, MDBTypography, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Navbar from '../Header/Navbar';
 import { db } from '../Services/firebase';
 import { getDoc, doc, updateDoc } from 'firebase/firestore';
