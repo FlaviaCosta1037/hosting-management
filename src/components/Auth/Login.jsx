@@ -33,9 +33,9 @@ const Login = () => {
         <MDBContainer className="my-5">
             <MDBCard>
                 <MDBRow className='g-0'>
-                    <MDBCol md='6'>
+                    {/* <MDBCol md='6'>
                         <MDBCardImage src='https://www.carneirostemporada.com/media/5c598b748631470011f5598d/Vista%20a%C3%A9rea.jpg' alt="login form" className='rounded-start w-100' />
-                    </MDBCol>
+                    </MDBCol> */}
 
                     <MDBCol md='6'>
                         <MDBCardBody className='d-flex flex-column'>

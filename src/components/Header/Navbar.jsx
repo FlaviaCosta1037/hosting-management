@@ -23,7 +23,7 @@ export default function Navbar() {
             height='30'
             alt=''
             loading='lazy'
-            style={{ width: '150px', height: '150px', borderRadius: '5px' }}
+            style={{ width: '90px', height: '90px', borderRadius: '5px' }}
           />
         </MDBNavbarBrand>
         {/* O botão do menu hamburguer pode ser mantido se você desejar */}
