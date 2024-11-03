@@ -81,7 +81,7 @@ export default function AddExpense() {
 
             <MDBRow className="mt-3">
               <MDBCol>
-                <MDBBtn onClick={handleAddExpense}>Adicionar Despesa</MDBBtn>
+                <MDBBtn onClick={handleAddExpense}>Salvar</MDBBtn>
               </MDBCol>
               <MDBCol className="text-end">
                 <MDBBtn color='danger' onClick={() => navigate('/expenses')}>Voltar</MDBBtn>

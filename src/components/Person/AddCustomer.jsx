@@ -138,7 +138,7 @@ export default function AddCustomer() {
                 <MDBBtn className='me-1' color='danger' onClick={() => navigate('/listCustomer')}  >Voltar</MDBBtn>
               </MDBCol>
             </MDBRow>
-      </MDBContainer>
+      </MDBContainer><br />
       </div>
       <Footer></Footer>
     </>

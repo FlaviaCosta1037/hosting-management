@@ -120,7 +120,7 @@ function EditExpense() {
                                 />
                                 <MDBRow className="mt-3">
                                     <MDBCol>
-                                        <MDBBtn type="submit">Atualizar Despesa</MDBBtn>
+                                        <MDBBtn type="submit">Salvar</MDBBtn>
                                     </MDBCol>
                                     <MDBCol className="text-end">
                                         <MDBBtn color="danger" onClick={() => navigate('/expenses')}>Voltar</MDBBtn>

@@ -221,7 +221,7 @@ export default function AddHosting() {
 
                 <MDBRow className="mt-3">
                   <MDBCol>
-                    <MDBBtn onClick={handleAddHosting}>Adicionar Hospedagem</MDBBtn>
+                    <MDBBtn onClick={handleAddHosting}>Salvar</MDBBtn>
                   </MDBCol>
                   <MDBCol className="text-end">
                     <MDBBtn color='danger' onClick={() => navigate('/hosting')}>Voltar</MDBBtn>

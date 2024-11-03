@@ -141,18 +141,18 @@ export default function ListExpenses() {
                             ))}
                         </MDBTableBody>
                     </MDBTable>
-                    <MDBContainer className="d-flex justify-content-center mt-4">
-                        <MDBCard className="text-center" style={{ width: '300px' }}>
-                            <MDBCardBody className='custom-card'>
-                                <MDBCardTitle><b>Total de despesas</b></MDBCardTitle>
-                                <MDBTypography tag="h5" className="mt-3">
-                                    R$ {total.toFixed(2)}
-                                </MDBTypography>
-                            </MDBCardBody>
-                        </MDBCard>
-                    </MDBContainer>
                 </div >
-            </MDBContainer>
+                <MDBContainer className="d-flex justify-content-center mt-4">
+                    <MDBCard className="text-center" style={{ width: '300px' }}>
+                        <MDBCardBody className='custom-card'>
+                            <MDBCardTitle><b>Total de despesas</b></MDBCardTitle>
+                            <MDBTypography tag="h5" className="mt-3">
+                                R$ {total.toFixed(2)}
+                            </MDBTypography>
+                        </MDBCardBody>
+                    </MDBCard>
+                </MDBContainer><br />
+            </MDBContainer><br />
             <Footer />
         </>
     );

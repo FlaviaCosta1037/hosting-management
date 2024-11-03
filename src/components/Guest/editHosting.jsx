@@ -141,7 +141,7 @@ export default function EditHosting() {
 
             <MDBRow className="mt-3">
               <MDBCol>
-                <MDBBtn onClick={handleUpdateHosting}>Atualizar Hospedagem</MDBBtn>
+                <MDBBtn onClick={handleUpdateHosting}>Salvar</MDBBtn>
               </MDBCol>
               <MDBCol className="text-end">
                 <MDBBtn color='danger' onClick={() => navigate('/hosting')}>Voltar</MDBBtn>
