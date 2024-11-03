@@ -34,7 +34,7 @@ const Login = () => {
 
     return (
         <>
-                <MDBContainer className='animated-background' style={{ minHeight: '100vh', padding: 0  }}><br />
+                <MDBContainer className='animated-background' style={{ minHeight: '100vh', padding: '20px'  }}><br />
                 <MDBCard className='mx-auto my-5' style={{ maxWidth: '400px', margin: '0 15px' }}>
                         <MDBRow className='g-0'>
                             {/* <MDBCol md='6'>
