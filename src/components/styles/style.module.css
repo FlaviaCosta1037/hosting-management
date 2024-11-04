@@ -1,0 +1,48 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .page-container > *:nth-child(2) {
+    flex: 1;
+  }
+
+  .container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.title {
+    color: #0d6efd;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.leadText {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tableContainer {
+    overflow-x: auto;
+}
+
+.tableActions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .tableActions {
+        flex-direction: row;
+    }
+
+    .actionButton {
+        margin-right: 0.5rem;
+    }
+}
+
+  

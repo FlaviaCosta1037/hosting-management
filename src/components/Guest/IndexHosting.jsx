@@ -5,7 +5,7 @@ import Navbar from '../Header/Navbar';
 import { useNavigate } from 'react-router-dom';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 import Footer from '../Footer/Footer';
-import '../../App.css'
+import '../styles/style.module.css'
 
 export default function ListHosting() {
     const navigate = useNavigate();
@@ -55,53 +55,64 @@ export default function ListHosting() {
     return (
         <>
             <Navbar />
-            <MDBContainer className="my-5">
-                <MDBTypography tag="h1" className="display-4 text-primary text-center">
-                    Gerenciamento de Hospedagem
-                </MDBTypography>
-                <MDBTypography tag="p" className="lead text-center">
-                    Relatório de reservas
-                </MDBTypography>
+            <div className="main-content">
+                <MDBContainer className={"styles.container"}>
+                    <MDBTypography tag="h1" className={"styles.title"}>
+                        Gerenciamento de Hospedagem
+                    </MDBTypography>
+                    <MDBTypography tag="p" className={"styles.leadText"}>
+                        Relatório de reservas
+                    </MDBTypography>
 
-                {error && <p className="text-danger text-center">{error}</p>}
+                    {error && <p className="text-danger text-center">{error}</p>}
 
-                <div className="table-responsive">
-                    <MDBTable bordered>
-                        <MDBTableHead>
-                            <tr>
-                                <th scope="col">Check-in</th>
-                                <th scope="col">Check-out</th>
-                                <th scope="col">Diárias</th>
-                                <th scope="col">Valor Unitário</th>
-                                <th scope="col">Valor Total</th>
-                                <th scope="col">Ações</th>
-                            </tr>
-                        </MDBTableHead>
-                        <MDBTableBody>
-                            {filteredHosting.map((item) => (
-                                <tr key={item.id}>
-                                    <td>{formatDate(item.dateCheckin)}</td>
-                                    <td>{formatDate(item.dateCheckout)}</td>
-                                    <td>{item.numberOfDays}</td>
-                                    <td>{item.dailyRate}</td>
-                                    <td>{item.total}</td>
-                                    <td>
-                                        <div className="flex-row flex-wrap justify-content-center">
-                                            <MDBBtn color="primary" onClick={() => navigate(`/editHosting/${item.id}`, { state: { customerCPF: item.customerCPF, customerName: item.customerName } })}>
-                                                Editar
-                                            </MDBBtn>
-                                            <MDBBtn color="danger" className="ms-2" onClick={() => handleDelete(item.id)}>
-                                                Deletar
-                                            </MDBBtn>
-                                        </div>
-                                    </td>
+                    <div className={"styles.tableContainer"}>
+                        <MDBTable bordered className="text-center">
+                            <MDBTableHead>
+                                <tr>
+                                    <th scope="col">Check-in</th>
+                                    <th scope="col">Check-out</th>
+                                    <th scope="col">Diárias</th>
+                                    <th scope="col">Valor Unitário</th>
+                                    <th scope="col">Valor Total</th>
+                                    <th scope="col" className="d-none d-md-table-cell">Ações</th>
                                 </tr>
-                            ))}
-                        </MDBTableBody>
-                    </MDBTable>
-                </div>
-            </MDBContainer>
-           <Footer></Footer>
+                            </MDBTableHead>
+                            <MDBTableBody>
+                                {filteredHosting.map((item) => (
+                                    <tr key={item.id}>
+                                        <td>{formatDate(item.dateCheckin)}</td>
+                                        <td>{formatDate(item.dateCheckout)}</td>
+                                        <td>{item.numberOfDays}</td>
+                                        <td>{item.dailyRate}</td>
+                                        <td>{item.total}</td>
+                                        <td className="text-center">
+                                            <div className={"styles.tableActions"}>
+                                                <MDBBtn
+                                                    size="sm"
+                                                    color="primary"
+                                                    className={`${"styles.actionButton"} mb-2 mb-md-0`}
+                                                    onClick={() => navigate(`/editHosting/${item.id}`, { state: { customerCPF: item.customerCPF, customerName: item.customerName } })}
+                                                >
+                                                    Editar
+                                                </MDBBtn>
+                                                <MDBBtn
+                                                    size="sm"
+                                                    color="danger"
+                                                    onClick={() => handleDelete(item.id)}
+                                                >
+                                                    Deletar
+                                                </MDBBtn>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </MDBTableBody>
+                        </MDBTable>
+                    </div>
+                </MDBContainer>
+            </div>
+            <Footer></Footer>
         </>
     );
 }
