@@ -9,7 +9,6 @@ import {
     MDBCardBody,
     MDBRow,
     MDBCol,
-    MDBIcon,
     MDBInput
 } from 'mdb-react-ui-kit';
 import '../../Background.css';
@@ -47,7 +46,7 @@ const Login = () => {
                         <MDBCol md='12'>
                             <MDBCardBody className='d-flex flex-column align-items-center'>
                                 <div className='d-flex flex-row mt-2'>
-                                    <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }} />
+                                    {/* <MDBIcon fas icon="cubes fa-3x me-3" style={{ color: '#ff6219' }} /> */}
                                     <img src="DevF.png" alt="" style={{ width: '100px', borderRadius: '40px' }} />
                                 </div>
 
