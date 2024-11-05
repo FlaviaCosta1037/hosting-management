@@ -139,7 +139,7 @@ export default function AddHosting() {
   return (
     <>
       <Navbar /><br />
-      <div className="table-responsive">
+      <div className="main-content">
       <MDBContainer className="text-center py-5">
         <MDBTypography tag="h1" className="display-4 text-primary">
           Gerenciamento de Hospedagem

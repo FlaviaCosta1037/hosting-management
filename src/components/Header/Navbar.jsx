@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   MDBNavbar,
   MDBContainer,
@@ -10,65 +10,95 @@ import {
   MDBDropdownMenu,
   MDBDropdownToggle,
   MDBDropdownItem,
-  MDBNavbarBrand
+  MDBNavbarBrand,
+  MDBCollapse,
+  MDBNavbarToggler
 } from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom'; // Importar o Link para redirecionamentos
 
 export default function Navbar() {
+  const [showNav, setShowNav] = useState(false);
+
+  const handleToggle = () => {
+    console.log('Menu hamburger clicado'); // Verifique se essa linha aparece no console
+    setShowNav(!showNav);
+  };
+
   return (
     <MDBNavbar className='animated-background' expand='lg' light bgColor='light'>
-      <MDBContainer>
+      <MDBContainer className="navbar-left">
         <MDBNavbarBrand href='#'>
           <img
             src='/SH.png'
             height='30'
-            alt=''
+            alt='Brand Logo'
             loading='lazy'
             style={{ width: '90px', height: '90px', borderRadius: '5px' }}
           />
         </MDBNavbarBrand>
-        {/* O botão do menu hamburguer pode ser mantido se você desejar */}
-        <MDBIcon icon='bars' fas style={{ display: 'none' }} /> {/* Ocultei o ícone hamburguer */}
 
-        <MDBNavbarNav right className='mb-2 mb-lg-0'>
-          <MDBNavbarItem>
-            <MDBDropdown>
-              <MDBDropdownToggle tag='a' className='nav-link'>
-                Hospedagens
-              </MDBDropdownToggle>
-              <MDBDropdownMenu>
-                <MDBDropdownItem link href='/hosting'>Registro de hospedagens</MDBDropdownItem>
-                <MDBDropdownItem link href='/AddHosting'>Adicionar hospedagem</MDBDropdownItem>
-              </MDBDropdownMenu>
-            </MDBDropdown>
-          </MDBNavbarItem>
-          <MDBNavbarItem>
-            <MDBDropdown>
-              <MDBDropdownToggle tag='a' className='nav-link'>
-                Clientes
-              </MDBDropdownToggle>
-              <MDBDropdownMenu>
-                <MDBDropdownItem link href='/listCustomer'>Clientes cadastrados</MDBDropdownItem>
-                <MDBDropdownItem link href='/addCustomer'>Adicionar cliente</MDBDropdownItem>
-              </MDBDropdownMenu>
-            </MDBDropdown>
-          </MDBNavbarItem>
-          <MDBNavbarItem>
-            <MDBDropdown>
-              <MDBDropdownToggle tag='a' className='nav-link'>
-                Contabilidade
-              </MDBDropdownToggle>
-              <MDBDropdownMenu>
-                <MDBDropdownItem link href='/expenses'>Entrada e saída</MDBDropdownItem>
-                <MDBDropdownItem link href='/addExpense'>Adicionar despesa</MDBDropdownItem>
-              </MDBDropdownMenu>
-            </MDBDropdown>
-          </MDBNavbarItem>
-          <MDBNavbarItem>
-            <MDBNavbarLink active aria-current='page' link href='/login'>
-              Sair
-            </MDBNavbarLink>
-          </MDBNavbarItem>
-        </MDBNavbarNav>
+        <MDBNavbarToggler
+          type='button'
+          aria-label='Toggle navigation'
+          onClick={handleToggle}
+        >
+          <MDBIcon icon='bars' fas />
+        </MDBNavbarToggler>
+
+        <MDBCollapse show={showNav} navbar>
+          <MDBNavbarNav right className='mb-2 mb-lg-0'>
+            <MDBNavbarItem>
+              <MDBDropdown>
+                <MDBDropdownToggle tag='a' className='nav-link'>
+                  Hospedagens
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                  <MDBDropdownItem>
+                    <Link to='/hosting'>Registro de hospedagens</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link to='/AddHosting'>Adicionar hospedagem</Link>
+                  </MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBDropdown>
+                <MDBDropdownToggle tag='a' className='nav-link'>
+                  Clientes
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                  <MDBDropdownItem>
+                    <Link to='/listCustomer'>Clientes cadastrados</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link to='/addCustomer'>Adicionar cliente</Link>
+                  </MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBDropdown>
+                <MDBDropdownToggle tag='a' className='nav-link'>
+                  Contabilidade
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                  <MDBDropdownItem>
+                    <Link to='/expenses'>Entrada e saída</Link>
+                  </MDBDropdownItem>
+                  <MDBDropdownItem>
+                    <Link to='/addExpense'>Adicionar despesa</Link>
+                  </MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink active aria-current='page' link href='/login'>
+                Sair
+              </MDBNavbarLink>
+            </MDBNavbarItem>
+          </MDBNavbarNav>
+        </MDBCollapse>
       </MDBContainer>
     </MDBNavbar>
   );

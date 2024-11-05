@@ -42,52 +42,51 @@ export default function AddExpense() {
   return (
     <>
       <Navbar /><br />
-      <div className="table-responsive">
+      <div className="main-content">
+        <MDBContainer className="text-center py-5">
+          <MDBTypography tag="h1" className="display-4 text-primary">
+            Gerenciamento de Despesas
+          </MDBTypography>
+          <MDBTypography tag="p" className="lead">
+            Adicione uma despesa agora!
+          </MDBTypography>
+        </MDBContainer>
 
-      <MDBContainer className="text-center py-5">
-        <MDBTypography tag="h1" className="display-4 text-primary">
-          Gerenciamento de Despesas
-        </MDBTypography>
-        <MDBTypography tag="p" className="lead">
-          Adicione uma despesa agora!
-        </MDBTypography>
-      </MDBContainer>
+        <MDBContainer>
+          <MDBInput
+            label="Data da Despesa"
+            value={expense.expenseDate}
+            onChange={(e) => setExpense({ ...expense, expenseDate: e.target.value })}
+            id="expenseDateInput"
+            type="date"
+            className="mb-3"
+          />
+          <MDBInput
+            label="Nome da Despesa"
+            value={expense.expenseName}
+            onChange={(e) => setExpense({ ...expense, expenseName: e.target.value })}
+            id="expenseNameInput"
+            type="text"
+            className="mb-3"
+          />
+          <MDBInput
+            label="Valor da Despesa"
+            value={expense.value}
+            onChange={(e) => setExpense({ ...expense, value: e.target.value })}
+            id="valueInput"
+            type="number"
+            className="mb-3"
+          />
 
-      <MDBContainer>
-            <MDBInput
-              label="Data da Despesa"
-              value={expense.expenseDate}
-              onChange={(e) => setExpense({ ...expense, expenseDate: e.target.value })}
-              id="expenseDateInput"
-              type="date"
-              className="mb-3"
-            />
-            <MDBInput
-              label="Nome da Despesa"
-              value={expense.expenseName}
-              onChange={(e) => setExpense({ ...expense, expenseName: e.target.value })}
-              id="expenseNameInput"
-              type="text"
-              className="mb-3"
-            />
-            <MDBInput
-              label="Valor da Despesa"
-              value={expense.value}
-              onChange={(e) => setExpense({ ...expense, value: e.target.value })}
-              id="valueInput"
-              type="number"
-              className="mb-3"
-            />
-
-            <MDBRow className="mt-3">
-              <MDBCol>
-                <MDBBtn onClick={handleAddExpense}>Salvar</MDBBtn>
-              </MDBCol>
-              <MDBCol className="text-end">
-                <MDBBtn color='danger' onClick={() => navigate('/expenses')}>Voltar</MDBBtn>
-              </MDBCol>
-            </MDBRow>
-      </MDBContainer>
+          <MDBRow className="mt-3">
+            <MDBCol>
+              <MDBBtn onClick={handleAddExpense}>Salvar</MDBBtn>
+            </MDBCol>
+            <MDBCol className="text-end">
+              <MDBBtn color='danger' onClick={() => navigate('/expenses')}>Voltar</MDBBtn>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
       </div><br />
       <Footer></Footer>
     </>

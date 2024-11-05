@@ -77,60 +77,60 @@ function EditExpense() {
     return (
         <>
             <Navbar />
-            <div className="table-responsive">
+            <div className="main-content">
 
-            <MDBContainer className="text-center py-5">
-                <MDBTypography tag="h1" className="display-4 text-primary">
-                    Gerenciamento de Hospedagem
-                </MDBTypography>
-                <MDBTypography tag="p" className="lead">
-                    Edite uma despesa agora!
-                </MDBTypography>
-            </MDBContainer>
-            {error && <p className="text-danger">{error}</p>}
-            <MDBContainer>
-                        {expense ? (
-                            <form onSubmit={handleSubmit}>
-                                <h2>Editar Despesa</h2>
-                                <MDBInput
-                                    label="Data da Despesa"
-                                    name="expenseDate"
-                                    type="date"
-                                    value={expense.expenseDate}
-                                    onChange={handleChange}
-                                    required
-                                    className="mb-3"
-                                />
-                                <MDBInput
-                                    label="Descrição"
-                                    name="expenseName"
-                                    value={expense.expenseName}
-                                    onChange={handleChange}
-                                    required
-                                    className="mb-3"
-                                />
-                                <MDBInput
-                                    label="Valor"
-                                    name="value"
-                                    type="number"
-                                    value={expense.value}
-                                    onChange={handleChange}
-                                    required
-                                    className="mb-3"
-                                />
-                                <MDBRow className="mt-3">
-                                    <MDBCol>
-                                        <MDBBtn type="submit">Salvar</MDBBtn>
-                                    </MDBCol>
-                                    <MDBCol className="text-end">
-                                        <MDBBtn color="danger" onClick={() => navigate('/expenses')}>Voltar</MDBBtn>
-                                    </MDBCol>
-                                </MDBRow>
-                            </form>
-                        ) : (
-                            <p>Despesa não encontrada.</p>
-                        )}
-            </MDBContainer>
+                <MDBContainer className="text-center py-5">
+                    <MDBTypography tag="h1" className="display-4 text-primary">
+                        Gerenciamento de Hospedagem
+                    </MDBTypography>
+                    <MDBTypography tag="p" className="lead">
+                        Edite uma despesa agora!
+                    </MDBTypography>
+                </MDBContainer>
+                {error && <p className="text-danger">{error}</p>}
+                <MDBContainer>
+                    {expense ? (
+                        <form onSubmit={handleSubmit}>
+                            <h2>Editar Despesa</h2>
+                            <MDBInput
+                                label="Data da Despesa"
+                                name="expenseDate"
+                                type="date"
+                                value={expense.expenseDate}
+                                onChange={handleChange}
+                                required
+                                className="mb-3"
+                            />
+                            <MDBInput
+                                label="Descrição"
+                                name="expenseName"
+                                value={expense.expenseName}
+                                onChange={handleChange}
+                                required
+                                className="mb-3"
+                            />
+                            <MDBInput
+                                label="Valor"
+                                name="value"
+                                type="number"
+                                value={expense.value}
+                                onChange={handleChange}
+                                required
+                                className="mb-3"
+                            />
+                            <MDBRow className="mt-3">
+                                <MDBCol>
+                                    <MDBBtn type="submit">Salvar</MDBBtn>
+                                </MDBCol>
+                                <MDBCol className="text-end">
+                                    <MDBBtn color="danger" onClick={() => navigate('/expenses')}>Voltar</MDBBtn>
+                                </MDBCol>
+                            </MDBRow>
+                        </form>
+                    ) : (
+                        <p>Despesa não encontrada.</p>
+                    )}
+                </MDBContainer>
             </div><br />
             <Footer></Footer>
         </>

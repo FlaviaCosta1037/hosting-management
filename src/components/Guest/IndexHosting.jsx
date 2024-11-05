@@ -56,54 +56,54 @@ export default function ListHosting() {
         <>
             <Navbar />
             <div className="main-content">
-            <MDBContainer className="my-5">
-                <MDBTypography tag="h1" className="display-4 text-primary text-center">
-                    Gerenciamento de Hospedagem
-                </MDBTypography>
-                <MDBTypography tag="p" className="lead text-center">
-                    Relatório de reservas
-                </MDBTypography>
+                <MDBContainer className="my-5">
+                    <MDBTypography tag="h1" className="display-4 text-primary text-center">
+                        Gerenciamento de Hospedagem
+                    </MDBTypography>
+                    <MDBTypography tag="p" className="lead text-center">
+                        Relatório de reservas
+                    </MDBTypography>
 
-                {error && <p className="text-danger text-center">{error}</p>}
+                    {error && <p className="text-danger text-center">{error}</p>}
 
-                <div className="table-responsive">
-                    <MDBTable bordered>
-                        <MDBTableHead>
-                            <tr>
-                                <th scope="col">Check-in</th>
-                                <th scope="col">Check-out</th>
-                                <th scope="col">Diárias</th>
-                                <th scope="col">Valor Unitário</th>
-                                <th scope="col">Valor Total</th>
-                                <th scope="col">Ações</th>
-                            </tr>
-                        </MDBTableHead>
-                        <MDBTableBody>
-                            {filteredHosting.map((item) => (
-                                <tr key={item.id}>
-                                    <td>{formatDate(item.dateCheckin)}</td>
-                                    <td>{formatDate(item.dateCheckout)}</td>
-                                    <td>{item.numberOfDays}</td>
-                                    <td>{item.dailyRate}</td>
-                                    <td>{item.total}</td>
-                                    <td>
-                                        <div className="flex flex-wrap justify-content-center">
-                                            <MDBBtn color="primary" onClick={() => navigate(`/editHosting/${item.id}`, { state: { customerCPF: item.customerCPF, customerName: item.customerName } })}>
-                                                Editar
-                                            </MDBBtn>
-                                            <MDBBtn color="danger" className="ms-2" onClick={() => handleDelete(item.id)}>
-                                                Deletar
-                                            </MDBBtn>
-                                        </div>
-                                    </td>
+                    <div className="table-responsive">
+                        <MDBTable bordered>
+                            <MDBTableHead>
+                                <tr>
+                                    <th scope="col">Check-in</th>
+                                    <th scope="col">Check-out</th>
+                                    <th scope="col">Diárias</th>
+                                    <th scope="col">Valor Unitário</th>
+                                    <th scope="col">Valor Total</th>
+                                    <th scope="col">Ações</th>
                                 </tr>
-                            ))}
-                        </MDBTableBody>
-                    </MDBTable>
-                </div>
-            </MDBContainer>
+                            </MDBTableHead>
+                            <MDBTableBody>
+                                {filteredHosting.map((item) => (
+                                    <tr key={item.id}>
+                                        <td>{formatDate(item.dateCheckin)}</td>
+                                        <td>{formatDate(item.dateCheckout)}</td>
+                                        <td>{item.numberOfDays}</td>
+                                        <td>{item.dailyRate}</td>
+                                        <td>{item.total}</td>
+                                        <td>
+                                            <div className="flex flex-wrap justify-content-center">
+                                                <MDBBtn color="primary" onClick={() => navigate(`/editHosting/${item.id}`, { state: { customerCPF: item.customerCPF, customerName: item.customerName } })}>
+                                                    Editar
+                                                </MDBBtn>
+                                                <MDBBtn color="danger" className="ms-2" onClick={() => handleDelete(item.id)}>
+                                                    Deletar
+                                                </MDBBtn>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </MDBTableBody>
+                        </MDBTable>
+                    </div>
+                </MDBContainer>
             </div>
-           <Footer></Footer>
+            <Footer></Footer>
         </>
     );
 }
