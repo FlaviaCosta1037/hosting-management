@@ -1,13 +1,23 @@
 import React from 'react';
-import { MDBFooter } from 'mdb-react-ui-kit';
+import { MDBFooter, MDBIcon, MDBBtn } from 'mdb-react-ui-kit';
 
-export default function Footer() {
+export default function App() {
   return (
-    <MDBFooter bgColor='light' className='text-center text-lg-left'>
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        &copy; {new Date().getFullYear()} Copyright:{' '}
-        <a className='text-dark' href='https://mdbootstrap.com/'>
-          Flávia Costa 
+    <MDBFooter className='text-center animated-background' color='white' bgColor='dark'>
+      <section>
+        <MDBBtn outline color="light" floating className='m-1' href='https://www.linkedin.com/in/flaviacostaa' target='_blank' rel='noopener noreferrer' role='button'>
+          <MDBIcon fab icon='linkedin' />
+        </MDBBtn>
+
+        <MDBBtn outline color="light" floating className='m-1' href='https://github.com/FlaviaCosta1037' target='_blank' rel='noopener noreferrer' role='button'>
+          <MDBIcon fab icon='github' />
+        </MDBBtn>
+      </section>
+
+      <div>
+        © 2024 Copyright: 
+        <a className='text-white' href='https://mdbootstrap.com/' target='_blank' rel='noopener noreferrer'>
+          DevF
         </a>
       </div>
     </MDBFooter>

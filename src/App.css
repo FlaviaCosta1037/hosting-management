@@ -10,7 +10,9 @@ html, body, #root {
 }
 
 .main-content {
-  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
 }
 
 .App-logo {
@@ -68,4 +70,13 @@ table {
 th, td {
   text-align: center; /* Centraliza o texto nas células */
   white-space: nowrap; /* Evita quebra de texto nas células */
+}
+
+.alert {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+footer {
+  margin-top: auto; /* Faz o footer ficar na parte inferior */
 }

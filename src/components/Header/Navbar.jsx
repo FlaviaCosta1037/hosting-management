@@ -15,7 +15,7 @@ import {
 
 export default function Navbar() {
   return (
-    <MDBNavbar expand='lg' light bgColor='light'>
+    <MDBNavbar className='animated-background' expand='lg' light bgColor='light'>
       <MDBContainer>
         <MDBNavbarBrand href='#'>
           <img
