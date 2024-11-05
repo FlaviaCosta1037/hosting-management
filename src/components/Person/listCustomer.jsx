@@ -88,12 +88,12 @@ export default function ListCustomer() {
                             <MDBTableBody>
                                 {filteredCustomers.map((item) => (
                                     <tr key={item.id}>
-                                        <td>{item.cpf}</td>
-                                        <td>{item.nome}</td>
-                                        <td>{item.uf}</td>
+                                        <td className="text-start">{item.cpf}</td>
+                                        <td className="text-start">{item.nome}</td>
+                                        <td className="text-start">{item.uf}</td>
                                         <td>
                                             <MDBRow className="mt-3">
-                                                <MDBCol className="d-flex">
+                                                <MDBCol className="d-flex ">
                                                     <MDBBtn className="me-3" onClick={() => navigate(`/customers/${item.id}`)}>Editar</MDBBtn>
                                                     <MDBBtn onClick={() => handleDeleteCustomer(item.id)} color="danger">Deletar</MDBBtn>
                                                 </MDBCol>

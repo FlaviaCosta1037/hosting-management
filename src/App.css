@@ -77,6 +77,17 @@ th, td {
   width: 100%;
 }
 
+.mdb-collapse {
+  display: none; 
+}
+
+.mdb-collapse.show {
+  display: block; 
+}
+
+
 footer {
   margin-top: auto; /* Faz o footer ficar na parte inferior */
 }
+
+

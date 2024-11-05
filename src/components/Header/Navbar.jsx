@@ -14,16 +14,18 @@ import {
   MDBCollapse,
   MDBNavbarToggler
 } from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom'; // Importar o Link para redirecionamentos
+import { Link } from 'react-router-dom'; 
+import '../../App.css'
+
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false);
 
   const handleToggle = () => {
-    console.log('Menu hamburger clicado'); // Verifique se essa linha aparece no console
     setShowNav(!showNav);
+    console.log("Menu aberto:", !showNav); 
   };
-
+  
   return (
     <MDBNavbar className='animated-background' expand='lg' light bgColor='light'>
       <MDBContainer className="navbar-left">
@@ -45,7 +47,7 @@ export default function Navbar() {
           <MDBIcon icon='bars' fas />
         </MDBNavbarToggler>
 
-        <MDBCollapse show={showNav} navbar>
+        <MDBCollapse show={showNav} navbar style={{ display: showNav ? 'block' : 'none' }}>
           <MDBNavbarNav right className='mb-2 mb-lg-0'>
             <MDBNavbarItem>
               <MDBDropdown>
@@ -54,10 +56,10 @@ export default function Navbar() {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <Link to='/hosting'>Registro de hospedagens</Link>
+                    <Link to='/hosting' className='nav-link text-dark text-decoration-none'> <MDBIcon icon='clipboard-list' className='me-2' /> Registro de hospedagens</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link to='/AddHosting'>Adicionar hospedagem</Link>
+                    <Link to='/AddHosting' className='nav-link text-dark text-decoration-none'><MDBIcon icon='plus-circle' className='me-2' />Adicionar hospedagem</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
@@ -69,10 +71,10 @@ export default function Navbar() {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <Link to='/listCustomer'>Clientes cadastrados</Link>
+                    <Link to='/listCustomer' className='nav-link text-dark text-decoration-none'><MDBIcon fas icon="users" className='me-2'  />Cadastrados</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link to='/addCustomer'>Adicionar cliente</Link>
+                    <Link to='/addCustomer' className='nav-link text-dark text-decoration-none'><MDBIcon fas icon="plus-circle" className='me-2'  />Adicionar cliente</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
@@ -84,10 +86,10 @@ export default function Navbar() {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <Link to='/expenses'>Entrada e saída</Link>
+                    <Link to='/expenses' className='nav-link text-dark text-decoration-none'><MDBIcon fas icon="exchange-alt" className='me-2' />Entrada e saída</Link>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <Link to='/addExpense'>Adicionar despesa</Link>
+                    <Link to='/addExpense'className='nav-link text-dark text-decoration-none'><MDBIcon fas icon="plus-circle"className='me-2'  />Adicionar despesa</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
